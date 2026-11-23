@@ -1,0 +1,16 @@
+# Data (GDPR / size)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Secrets
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/

@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+jupyter
+azure-ai-ml
+azure-identity
+python-dotenv
