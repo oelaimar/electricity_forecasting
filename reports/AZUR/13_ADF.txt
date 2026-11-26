@@ -1,0 +1,2 @@
+@concat('raw/', formatDateTime(utcNow(), 'yyyy/MM/dd'))
+@concat('PJMEhourly', formatDateTime(utcNow(), 'yyyyMMdd_HHmmss'), '.csv')
