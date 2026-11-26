@@ -39,11 +39,24 @@ class Config():
         # ---------- Dataset schema ----------
         self.DATETIME_COL = "Datetime"
         self.TARGET_COL = "PJME_MW"
+        self.SPLIT_RATIO = 0.80
 
         # ---------- Feature engineering ----------
         self.LAGS = (24, 168)          # lag_24, lag_168
         self.ROLLING_WINDOW = 24       # roll_24
         self.TIME_FEATURES = ["Hour", "DayOfWeek", "Month", "Year", "IsWeekend"]
+        
+        self.TIME_FEATURES = (
+            "Hour",
+            "DayOfWeek",
+            "Month",
+            "Year",
+            "IsWeekend",
+        )
+        self.LAG_FEATURES = ("lag24", "lag168", "roll_24")
+        self.MODEL_FEATURES = self.TIME_FEATURES + self.LAG_FEATURES
+        self.CATEGORICAL_FEATURES = ("Hour", "DayOfWeek", "Month")
+        
 
         # ---------- Modeling ----------
         self.TRAIN_RATIO = 0.8         # chronological 80/20 split
